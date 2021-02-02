@@ -41,7 +41,13 @@ const userSchema = new mongoose.Schema(
       enum: ["user", "admin", "super-admin"],
       default: "user",
     },
-    contactNumber: { type: String },
+    contactNumber: { 
+      type: String ,
+      required: true,
+      trim: true,
+      unique: true,
+      index: true,
+    },
     pofilePicture: { type: String },
   },
   { timestamps: true }

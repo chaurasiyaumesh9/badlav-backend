@@ -33,6 +33,18 @@ const petitionSchema = new mongoose.Schema(
         required: true,
     },
 
+    contactNumber: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+
+    email: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+
     updatedAt: Date,
 
     photo: { type: String }
